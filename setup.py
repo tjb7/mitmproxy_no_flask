@@ -19,9 +19,9 @@ with open(os.path.join(here, "mitmproxy", "version.py")) as f:
     VERSION = match.group(1)
 
 setup(
-    name="mitmproxy",
+    name="mitmproxy-no-flask",
     version=VERSION,
-    description="An interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.",
+    description="Flask dependency removed from mitmproxy-8. An SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.",
     long_description=long_description,
     long_description_content_type=long_description_content_type,
     url="http://mitmproxy.org",
@@ -72,7 +72,7 @@ setup(
         "Brotli>=1.0,<1.1",
         "certifi>=2019.9.11",  # no semver here - this should always be on the last release!
         "cryptography>=36,<37",
-        "flask>=1.1.1,<2.1",
+        # "flask>=1.1.1,<2.1",
         "h11>=0.11,<0.14",
         "h2>=4.1,<5",
         "hyperframe>=6.0,<7",
